@@ -1,0 +1,268 @@
+# Client Portal - Next.js 14 Frontend Setup
+
+## 🚀 Quick Start Commands
+
+```bash
+# Create Next.js app
+npx create-next-app@latest client-portal --typescript --tailwind --app --src-dir=false --import-alias="@/*"
+
+cd client-portal
+
+# Install dependencies
+npm install axios jotai zod jsonwebtoken socket.io-client lucide-react clsx
+npm install -D @types/jsonwebtoken @tailwindcss/forms
+
+# Create directory structure
+mkdir -p app/\(public\)/login
+mkdir -p app/\(auth\)/dashboard
+mkdir -p app/tickets/\[id\]
+mkdir -p lib
+mkdir -p components/ui
+mkdir -p types
+
+# Copy all files from the code blocks below into your project
+# Then run:
+npm run dev
+```
+
+## 📁 File Structure
+
+```
+client-portal/
+├── app/
+│   ├── (public)/
+│   │   └── login/
+│   │       └── page.tsx
+│   ├── (auth)/
+│   │   ├── layout.tsx
+│   │   ├── dashboard/
+│   │   │   └── page.tsx
+│   │   └── tickets/
+│   │       └── [id]/
+│   │           └── page.tsx
+│   ├── layout.tsx
+│   └── globals.css
+├── components/
+│   ├── ui/
+│   │   ├── Button.tsx
+│   │   ├── Input.tsx
+│   │   ├── Card.tsx
+│   │   ├── Badge.tsx
+│   │   ├── Table.tsx
+│   │   └── Loader.tsx
+│   ├── TopNav.tsx
+│   ├── TicketList.tsx
+│   ├── TicketDetail.tsx
+│   └── NewTicketForm.tsx
+├── lib/
+│   ├── api/
+│   │   └── client.ts
+│   ├── auth.ts
+│   └── ws.ts
+├── types/
+│   └── index.ts
+├── .env.local
+├── next.config.js
+├── tailwind.config.ts
+└── package.json
+```
+
+## 🔧 Environment Variables
+
+Create `.env.local`:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_WEBSOCKET_URL=ws://localhost:8000
+```
+
+For production:
+```env
+NEXT_PUBLIC_API_URL=https://api.redsis.com
+NEXT_PUBLIC_WEBSOCKET_URL=wss://api.redsis.com
+```
+
+## 📦 Complete File Contents
+
+Copy each file below into your project structure.
+
+---
+
+### `package.json`
+
+```json
+{
+  "name": "client-portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "clsx": "^2.0.0",
+    "jotai": "^2.6.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.294.0",
+    "next": "14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "socket.io-client": "^4.5.4",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
+```
+
+---
+
+### `tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+```
+
+---
+
+### `next.config.js`
+
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+}
+
+module.exports = nextConfig
+```
+
+---
+
+### `tailwind.config.ts`
+
+```typescript
+import type { Config } from 'tailwindcss'
+import forms from '@tailwindcss/forms'
+
+const config: Config = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        monday: {
+          blue: '#0073EA',
+          'blue-dark': '#0060B9',
+          'blue-light': '#E6F3FF',
+        },
+      },
+    },
+  },
+  plugins: [forms],
+}
+export default config
+```
+
+---
+
+### `postcss.config.js`
+
+```javascript
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
+
+---
+
+### `.env.local.example`
+
+```env
+# Backend API URL
+NEXT_PUBLIC_API_URL=http://localhost:8000
+
+# WebSocket URL
+NEXT_PUBLIC_WEBSOCKET_URL=ws://localhost:8000
+```
+
+---
+
+## 🎨 Usage
+
+1. Copy all files into the appropriate locations
+2. Create `.env.local` with your backend URL
+3. Run `npm install`
+4. Run `npm run dev`
+5. Navigate to http://localhost:3000
+
+The portal will be available at:
+- Login: `/login`
+- Dashboard: `/dashboard` (protected)
+- Tickets: `/tickets/{id}` (protected)
+
+## 🔐 Authentication Flow
+
+1. User enters magic link URL: `/login?portal_id={id}&token={token}`
+2. Frontend calls backend auth endpoint
+3. Backend returns JWT
+4. Frontend stores JWT in localStorage
+5. All subsequent requests include JWT in Authorization header
+
+## 🔄 Real-time Updates
+
+WebSocket connection established on dashboard mount. Receives:
+- New tickets
+- Ticket updates
+- Comment notifications
+
+## 📝 Notes
+
+- Backend enforces workspace lock (ID: 4655994) - not exposed in frontend
+- All API calls go through the axios client with auto-retry
+- JWT is auto-attached to requests via interceptor
+- Unauthorized (401) responses auto-redirect to login

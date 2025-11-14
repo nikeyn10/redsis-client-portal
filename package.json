@@ -1,0 +1,32 @@
+{
+  "name": "gorilla-portal-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gorilla-style Client Portal powered by monday.com",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:portal": "npm run dev --workspace=apps/client-portal",
+    "dev:monday-app": "npm run dev --workspace=apps/monday-app",
+    "build": "npm run build --workspaces --if-present",
+    "build:portal": "npm run build --workspace=apps/client-portal",
+    "build:monday-app": "npm run build --workspace=apps/monday-app",
+    "build:backend": "npm run build --workspace=apps/backend",
+    "deploy:backend": "npm run deploy --workspace=apps/backend",
+    "deploy:portal": "npm run deploy --workspace=apps/client-portal",
+    "deploy:monday-app": "npm run deploy --workspace=apps/monday-app",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules apps/*/.next"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

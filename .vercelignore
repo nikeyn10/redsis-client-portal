@@ -1,0 +1,38 @@
+# Documentation
+*.md
+*.txt
+DEPLOYMENT_GUIDE.md
+DEPLOYMENT.md
+executivesummary.md
+GORILLA_IMPLEMENTATION_PLAN.md
+INTEGRATION_WORKFLOW.md
+MONDAY_APP_GUIDE.md
+MONDAY_INTEGRATION_GUIDE.md
+NEXT_STEPS.md
+TRANSFORMATION_SUMMARY.md
+QUICK_START.md
+QUICKSTART.md
+BACKEND_QUICKSTART.md
+
+# Backend (not needed for frontend deployment)
+apps/backend/
+
+# Node modules (will be reinstalled)
+node_modules/
+**/node_modules/
+
+# Build artifacts
+**/.next/
+**/dist/
+**/build/
+
+# Development files
+**/.git/
+**/.github/
+**/.vscode/
+
+# Misc
+.DS_Store
+*.log
+*.zip
+Archive.zip

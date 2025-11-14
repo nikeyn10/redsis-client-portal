@@ -1,0 +1,24 @@
+{
+  "name": "gorilla-portal-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monday Code backend functions for Gorilla Portal",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "echo 'Use monday-code CLI for local development'",
+    "build": "tsc",
+    "deploy": "mapps code:push",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@portal/types": "*",
+    "@portal/monday-sdk": "*",
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
