@@ -220,11 +220,9 @@ export default function CompanyManagement() {
         boardId: '18379404757',
         itemName: companyName,
         columnValues: JSON.stringify({
-          status: { label: 'Active' },
-          dropdown_mkxpakmh: { label: newBoardId },
-          text_mkxqv75c: { text: editingCompany?.contactName || '' },
+          text_mkxqv75c: editingCompany?.contactName || '',
           email_mkxqs6z4: { email: editingCompany?.contactEmail || '', text: editingCompany?.contactEmail || '' },
-          phone_mkxqb808: { phone: editingCompany?.contactPhone || '', countryShortName: 'US' }
+          phone_mkxqb808: editingCompany?.contactPhone ? editingCompany.contactPhone.replace(/\D/g, '') : ''
         })
       });
 
@@ -266,26 +264,13 @@ export default function CompanyManagement() {
       `;
 
       const columnValues: any = {
-        status: { label: editingCompany.status },
-        text_mkxqv75c: { text: editingCompany.contactName || '' },
+        text_mkxqv75c: editingCompany.contactName || '',
         email_mkxqs6z4: { email: editingCompany.contactEmail || '', text: editingCompany.contactEmail || '' },
-        phone_mkxqb808: { phone: editingCompany.contactPhone || '', countryShortName: 'US' }
+        phone_mkxqb808: editingCompany.contactPhone ? editingCompany.contactPhone.replace(/\D/g, '') : ''
       };
 
       if (editingCompany.ticketBoardId) {
-        columnValues.dropdown_mkxpakmh = { label: editingCompany.ticketBoardId };
-      }
-
-      if (editingCompany.contactName) {
-        columnValues.text = { text: editingCompany.contactName };
-      }
-
-      if (editingCompany.contactEmail) {
-        columnValues.email = { email: editingCompany.contactEmail, text: editingCompany.contactEmail };
-      }
-
-      if (editingCompany.contactPhone) {
-        columnValues.phone = { phone: editingCompany.contactPhone, text: editingCompany.contactPhone };
+        columnValues.dropdown_mkxpakmh = { labels: [editingCompany.ticketBoardId] };
       }
 
       await executeMondayQuery(mutation, {
@@ -461,10 +446,10 @@ export default function CompanyManagement() {
                           href={`https://redsisrgh.monday.com/boards/${company.ticketBoardId}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-800"
+                          className="p-1.5 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded"
                           title="Open Board"
                         >
-                          <ExternalLink className="w-4 h-4" />
+                          <ExternalLink className="w-5 h-5" />
                         </a>
                       ) : (
                         <button
@@ -472,25 +457,25 @@ export default function CompanyManagement() {
                             setSelectedCompany(company);
                             setShowLinkBoard(true);
                           }}
-                          className="text-green-600 hover:text-green-800"
+                          className="p-1.5 text-green-600 hover:text-green-800 hover:bg-green-50 rounded"
                           title="Link Board"
                         >
-                          <LinkIcon className="w-4 h-4" />
+                          <LinkIcon className="w-5 h-5" />
                         </button>
                       )}
                       <button
                         onClick={() => startEdit(company)}
-                        className="text-blue-600 hover:text-blue-800"
+                        className="p-1.5 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded"
                         title="Edit"
                       >
-                        <Edit className="w-4 h-4" />
+                        <Edit className="w-5 h-5" />
                       </button>
                       <button
                         onClick={() => deleteCompany(company)}
-                        className="text-red-600 hover:text-red-800"
+                        className="p-1.5 text-red-600 hover:text-red-800 hover:bg-red-50 rounded"
                         title="Delete"
                       >
-                        <Trash2 className="w-4 h-4" />
+                        <Trash2 className="w-5 h-5" />
                       </button>
                     </div>
                   </td>

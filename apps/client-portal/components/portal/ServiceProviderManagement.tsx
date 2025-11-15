@@ -131,10 +131,9 @@ export default function ServiceProviderManagement() {
         itemName: formData.name,
         columnValues: JSON.stringify({
           email_mkxpawg3: { email: formData.email, text: formData.email },
-          phone_mkxpec5j: { phone: formData.phone, countryShortName: 'US' },
-          text_mkxpb7j4: { text: formData.password },
-          dropdown_mkxpdbxw: formData.specialization,
-          status: formData.status,
+          phone_mkxpec5j: formData.phone.replace(/\D/g, ''),
+          text_mkxpb7j4: formData.password,
+          dropdown_mkxpdbxw: { labels: [formData.specialization] },
           numeric_mkxp72jc: 0
         })
       });
@@ -185,13 +184,12 @@ export default function ServiceProviderManagement() {
 
       const columnValues: any = {
         email_mkxpawg3: { email: editingProvider.email, text: editingProvider.email },
-        phone_mkxpec5j: { phone: editingProvider.phone, countryShortName: 'US' },
-        dropdown_mkxpdbxw: editingProvider.specialization,
-        status: editingProvider.status
+        phone_mkxpec5j: editingProvider.phone.replace(/\D/g, ''),
+        dropdown_mkxpdbxw: { labels: [editingProvider.specialization] }
       };
 
       if (formData.password) {
-        columnValues.text_mkxpb7j4 = { text: formData.password };
+        columnValues.text_mkxpb7j4 = formData.password;
       }
 
       await executeMondayQuery(mutation, {
@@ -381,17 +379,17 @@ export default function ServiceProviderManagement() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => startEdit(provider)}
-                        className="text-blue-600 hover:text-blue-800"
+                        className="p-1.5 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded"
                         title="Edit"
                       >
-                        <Edit className="w-4 h-4" />
+                        <Edit className="w-5 h-5" />
                       </button>
                       <button
                         onClick={() => deleteProvider(provider)}
-                        className="text-red-600 hover:text-red-800"
+                        className="p-1.5 text-red-600 hover:text-red-800 hover:bg-red-50 rounded"
                         title="Delete"
                       >
-                        <Trash2 className="w-4 h-4" />
+                        <Trash2 className="w-5 h-5" />
                       </button>
                     </div>
                   </td>

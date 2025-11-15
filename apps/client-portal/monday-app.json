@@ -2,7 +2,7 @@
   "name": "REDSIS Client Portal",
   "description": "Client support ticket portal embedded in Monday.com boards",
   "version": "1.0.0",
-  "icon": "https://client-portal-65j5gbp81-mike-habibs-projects.vercel.app/icon.png",
+  "icon": "https://client-portal-q8oc787y3-mike-habibs-projects.vercel.app/icon.png",
   "developer": {
     "name": "REDSIS",
     "email": "support@redsis.com",
@@ -18,23 +18,23 @@
     {
       "type": "ItemView",
       "name": "Ticket Details",
-      "url": "https://client-portal-65j5gbp81-mike-habibs-projects.vercel.app/embed/ticket",
+      "url": "https://client-portal-q8oc787y3-mike-habibs-projects.vercel.app/embed/ticket",
       "description": "View and manage individual support ticket",
-      "icon": "https://client-portal-65j5gbp81-mike-habibs-projects.vercel.app/ticket-icon.png"
+      "icon": "https://client-portal-q8oc787y3-mike-habibs-projects.vercel.app/ticket-icon.png"
     },
     {
       "type": "BoardView",
       "name": "Client Dashboard",
-      "url": "https://client-portal-65j5gbp81-mike-habibs-projects.vercel.app/embed/dashboard",
+      "url": "https://client-portal-q8oc787y3-mike-habibs-projects.vercel.app/embed/dashboard",
       "description": "Overview dashboard of all client support tickets",
-      "icon": "https://client-portal-65j5gbp81-mike-habibs-projects.vercel.app/dashboard-icon.png"
+      "icon": "https://client-portal-q8oc787y3-mike-habibs-projects.vercel.app/dashboard-icon.png"
     },
     {
       "type": "BoardView",
       "name": "Portal Management",
-      "url": "https://client-portal-65j5gbp81-mike-habibs-projects.vercel.app/embed/portal",
+      "url": "https://client-portal-q8oc787y3-mike-habibs-projects.vercel.app/embed/portal",
       "description": "Complete management portal for companies, users, tickets and analytics",
-      "icon": "https://client-portal-65j5gbp81-mike-habibs-projects.vercel.app/portal-icon.png"
+      "icon": "https://client-portal-q8oc787y3-mike-habibs-projects.vercel.app/portal-icon.png"
     }
   ],
   "settings": {
