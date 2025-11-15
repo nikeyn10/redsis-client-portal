@@ -153,6 +153,9 @@ End of Report
     try {
       setLoading(true);
 
+      console.log('📋 Loading board data for board ID:', boardId);
+      console.log('📧 User email:', email);
+
       // Fetch board columns via API route
       const columnsResponse = await fetch(`/api/board-columns?boardId=${boardId}`);
       if (!columnsResponse.ok) {
@@ -207,6 +210,8 @@ End of Report
         priority: priorityColId,
         description: descriptionColId
       });
+
+      console.log('📡 Fetching tickets from board:', boardId);
 
       // Fetch tickets via API route
       const ticketsResponse = await fetch(`/api/tickets?boardId=${boardId}`);
