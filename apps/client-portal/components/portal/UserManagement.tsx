@@ -152,14 +152,19 @@ export default function UserManagement() {
 
       const selectedCompany = companies.find(c => c.id === selectedCompanyId);
 
+      const columnValues: any = {
+        email_mkxpm2m0: { email: userEmail, text: userEmail },
+        text_mkxpxyrr: userPassword
+      };
+
+      if (selectedCompany?.name) {
+        columnValues.dropdown_mkxpsjwd = { labels: [selectedCompany.name] };
+      }
+
       await executeMondayQuery(mutation, {
         boardId: '18379351659',
         itemName: userEmail,
-        columnValues: JSON.stringify({
-          email_mkxpm2m0: { email: userEmail, text: userEmail },
-          text_mkxpxyrr: userPassword,
-          dropdown_mkxpsjwd: { labels: [selectedCompany?.name || ''] }
-        })
+        columnValues: JSON.stringify(columnValues)
       });
 
       alert(`User "${userEmail}" created successfully!`);
@@ -209,9 +214,12 @@ export default function UserManagement() {
       const selectedCompany = companies.find(c => c.id === selectedCompanyId);
 
       const columnValues: any = {
-        email_mkxpm2m0: { email: editingUser.email, text: editingUser.email },
-        dropdown_mkxpsjwd: { labels: [selectedCompany?.name || ''] }
+        email_mkxpm2m0: { email: editingUser.email, text: editingUser.email }
       };
+
+      if (selectedCompany?.name) {
+        columnValues.dropdown_mkxpsjwd = { labels: [selectedCompany.name] };
+      }
 
       if (userPassword) {
         columnValues.text_mkxpxyrr = userPassword;
