@@ -177,8 +177,8 @@ End of Report
   const loadTickets = async (boardId: string, email: string, columns?: BoardColumn[]) => {
     try {
       // Use provided columns or fetch them
-      let cols = columns;
-      if (!cols || cols.length === 0) {
+      let cols: BoardColumn[] = columns || [];
+      if (cols.length === 0) {
         const columnsResponse = await fetch(`/api/board-columns?boardId=${boardId}`);
         if (!columnsResponse.ok) {
           throw new Error('Failed to fetch board columns');
