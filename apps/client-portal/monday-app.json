@@ -1,0 +1,102 @@
+{
+  "name": "REDSIS Client Portal",
+  "description": "Client support ticket portal embedded in Monday.com boards",
+  "version": "1.0.0",
+  "icon": "https://client-portal-hpw965klh-mike-habibs-projects.vercel.app/icon.png",
+  "developer": {
+    "name": "REDSIS",
+    "email": "support@redsis.com",
+    "url": "https://redsis.com"
+  },
+  "permissions": [
+    "boards:read",
+    "boards:write",
+    "account:read",
+    "me:read"
+  ],
+  "features": [
+    {
+      "type": "ItemView",
+      "name": "Ticket Details",
+      "url": "https://client-portal-hpw965klh-mike-habibs-projects.vercel.app/embed/ticket",
+      "description": "View and manage individual support ticket",
+      "icon": "https://client-portal-hpw965klh-mike-habibs-projects.vercel.app/ticket-icon.png"
+    },
+    {
+      "type": "BoardView",
+      "name": "Client Dashboard",
+      "url": "https://client-portal-hpw965klh-mike-habibs-projects.vercel.app/embed/dashboard",
+      "description": "Overview dashboard of all client support tickets",
+      "icon": "https://client-portal-hpw965klh-mike-habibs-projects.vercel.app/dashboard-icon.png"
+    },
+    {
+      "type": "BoardView",
+      "name": "Portal Management",
+      "url": "https://client-portal-hpw965klh-mike-habibs-projects.vercel.app/embed/portal",
+      "description": "Complete management portal for companies, users, tickets and analytics",
+      "icon": "https://client-portal-hpw965klh-mike-habibs-projects.vercel.app/portal-icon.png"
+    }
+  ],
+  "settings": {
+    "fields": [
+      {
+        "key": "api_endpoint",
+        "type": "text",
+        "name": "API Endpoint",
+        "description": "Your backend API URL (optional for advanced features)",
+        "default": "",
+        "required": false
+      },
+      {
+        "key": "enable_notifications",
+        "type": "boolean",
+        "name": "Enable Notifications",
+        "description": "Send notifications when ticket status changes",
+        "default": true,
+        "required": false
+      },
+      {
+        "key": "client_email_column",
+        "type": "text",
+        "name": "Client Email Column ID",
+        "description": "The column ID that stores client email addresses",
+        "default": "client_email",
+        "required": true
+      },
+      {
+        "key": "description_column",
+        "type": "text",
+        "name": "Description Column ID",
+        "description": "The column ID for ticket descriptions",
+        "default": "description",
+        "required": true
+      },
+      {
+        "key": "priority_column",
+        "type": "text",
+        "name": "Priority Column ID",
+        "description": "The column ID for ticket priority",
+        "default": "priority",
+        "required": true
+      },
+      {
+        "key": "status_column",
+        "type": "text",
+        "name": "Status Column ID",
+        "description": "The column ID for ticket status",
+        "default": "status",
+        "required": true
+      }
+    ]
+  },
+  "scopes": [
+    "me:read",
+    "boards:read",
+    "boards:write",
+    "updates:read",
+    "updates:write"
+  ],
+  "webhooks": {
+    "enabled": false
+  }
+}
