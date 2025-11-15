@@ -148,43 +148,32 @@ export const mondayTicketsApi = {
     priority: 'low' | 'medium' | 'high' | 'urgent',
     clientEmail?: string
   ): Promise<Ticket> {
-    const mutation = `
-      mutation CreateItem($boardId: ID!, $itemName: String!, $columnValues: JSON!) {
-        create_item(
-          board_id: $boardId,
-          item_name: $itemName,
-          column_values: $columnValues
-        ) {
-          id
-          name
-          created_at
-          updated_at
+    // Use server-side API route for ticket creation
+    const response = await fetch('/api/tickets', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        boardId,
+        itemName: title,
+        columnValues: {
+          priority: { label: priorityToLabel(priority) },
+          status: { label: 'Open' },
+          long_text: description,
+          ...(clientEmail && { client_email: { email: clientEmail, text: clientEmail } })
         }
-      }
-    `;
-
-    const columnValues: any = {
-      priority: { label: priorityToLabel(priority) },
-      status: { label: 'Open' },
-    };
-
-    // Add description if there's a long text column
-    if (description) {
-      columnValues.long_text = description;
-    }
-
-    // Add client email if provided
-    if (clientEmail) {
-      columnValues.client_email = { email: clientEmail, text: clientEmail };
-    }
-
-    const response = await executeMondayQuery(mutation, {
-      boardId,
-      itemName: title,
-      columnValues: JSON.stringify(columnValues)
+      }),
     });
 
-    const createdItem = response.data?.create_item;
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to create ticket');
+    }
+
+    const result = await response.json();
+    const createdItem = result.data?.create_item;
+    
     if (!createdItem) {
       throw new Error('Failed to create ticket');
     }

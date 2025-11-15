@@ -101,21 +101,27 @@ export default function NewTicketForm({ onSuccess, onCancel }: NewTicketFormProp
         await new Promise(resolve => setTimeout(resolve, 1000));
         onSuccess(newTicket);
       } else {
-        // Get board ID from context or environment variable
-        // Default ticket board ID (update this to your actual ticket board ID)
-        const TICKET_BOARD_ID = process.env.NEXT_PUBLIC_TICKET_BOARD_ID || '18379351659';
-        const boardId = context?.board?.id?.toString() || TICKET_BOARD_ID;
+        // Get board ID from localStorage (set during login)
+        const storedBoardId = localStorage.getItem('client_board_id');
+        // Default ticket board ID
+        const TICKET_BOARD_ID = process.env.NEXT_PUBLIC_TICKET_BOARD_ID || '18379040651';
+        const boardId = storedBoardId || context?.board?.id?.toString() || TICKET_BOARD_ID;
+        
+        // Get client email from localStorage
+        const clientEmail = localStorage.getItem('client_email') || context?.user?.email;
         
         if (!boardId) {
           throw new Error('No board configured for tickets. Please contact support.');
         }
+        
+        console.log('Creating ticket with:', { boardId, clientEmail, formData });
         
         const newTicket = await mondayTicketsApi.createTicket(
           boardId,
           formData.title,
           formData.description,
           formData.priority,
-          context?.user?.email
+          clientEmail
         );
         onSuccess(newTicket);
       }
