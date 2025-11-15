@@ -6,28 +6,6 @@ import { Loader } from '@/components/ui/Loader';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 
-// Direct Monday API call
-async function callMondayAPI(query: string, variables?: Record<string, any>) {
-  const response = await fetch('https://api.monday.com/v2', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': process.env.NEXT_PUBLIC_MONDAY_API_TOKEN || '',
-      'API-Version': '2023-10'
-    },
-    body: JSON.stringify({ query, variables })
-  });
-
-  const result = await response.json();
-  
-  if (result.errors) {
-    console.error('Monday API errors:', result.errors);
-    throw new Error(result.errors[0]?.message || 'Monday API error');
-  }
-  
-  return result;
-}
-
 function LoginContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -60,127 +38,37 @@ function LoginContent() {
     setStatus('loading');
 
     try {
-      // Query User board to authenticate
-      const query = `
-        query GetUsers($boardId: [ID!]!) {
-          boards(ids: $boardId) {
-            items_page(limit: 100) {
-              items {
-                id
-                name
-                column_values {
-                  id
-                  text
-                  value
-                }
-              }
-            }
-          }
-        }
-      `;
-
-      const response = await callMondayAPI(query, {
-        boardId: ['18379351659'] // User board ID
+      // Call the server-side login API
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
       });
 
-      if (response.data?.boards?.[0]?.items_page?.items) {
-        const users = response.data.boards[0].items_page.items;
-        
-        // Find user by email and password
-        const user = users.find((item: any) => {
-          const cols = item.column_values.reduce((acc: any, col: any) => {
-            acc[col.id] = col.text || col.value;
-            return acc;
-          }, {});
-          
-          const userEmail = cols.email_mkxpm2m0 || '';
-          const userPassword = cols.text_mkxpxyrr || '';
-          
-          return userEmail.toLowerCase() === email.toLowerCase() && userPassword === password;
-        });
+      const data = await response.json();
 
-        if (user) {
-          // Get user data
-          const userCols = user.column_values.reduce((acc: any, col: any) => {
-            acc[col.id] = col.text || col.value;
-            return acc;
-          }, {});
+      if (!response.ok) {
+        setError(data.error || 'Login failed. Please try again.');
+        setStatus('form');
+        return;
+      }
 
-          const companyName = userCols.dropdown_mkxpsjwd || '';
+      if (data.success && data.user) {
+        // Store authentication
+        localStorage.setItem('magic_token', data.user.token);
+        localStorage.setItem('client_email', data.user.email);
+        localStorage.setItem('client_board_id', data.user.ticketBoardId);
+        localStorage.setItem('user_name', data.user.name);
+        localStorage.setItem('user_company', data.user.company);
 
-          // Now fetch the company's ticket board ID from Company board
-          let ticketBoardId = '18379040651'; // Default fallback
-
-          if (companyName) {
-            try {
-              const companyQuery = `
-                query GetCompanies($boardId: [ID!]!) {
-                  boards(ids: $boardId) {
-                    items_page(limit: 100) {
-                      items {
-                        id
-                        name
-                        column_values {
-                          id
-                          text
-                          value
-                        }
-                      }
-                    }
-                  }
-                }
-              `;
-
-              const companyResponse = await callMondayAPI(companyQuery, {
-                boardId: ['18379404757'] // Company board ID
-              });
-
-              if (companyResponse.data?.boards?.[0]?.items_page?.items) {
-                const companies = companyResponse.data.boards[0].items_page.items;
-                
-                // Find the company by name
-                const company = companies.find((item: any) => item.name === companyName);
-                
-                if (company) {
-                  const companyCols = company.column_values.reduce((acc: any, col: any) => {
-                    acc[col.id] = col.text || col.value;
-                    return acc;
-                  }, {});
-                  
-                  // Get the board ID from dropdown_mkxpakmh column
-                  const boardIdFromCompany = companyCols.dropdown_mkxpakmh;
-                  
-                  if (boardIdFromCompany) {
-                    ticketBoardId = boardIdFromCompany;
-                    console.log(`✅ Found company ticket board: ${ticketBoardId} for ${companyName}`);
-                  } else {
-                    console.warn(`⚠️ Company "${companyName}" has no ticket board ID set`);
-                  }
-                }
-              }
-            } catch (err) {
-              console.error('Failed to fetch company board ID:', err);
-              // Continue with default board ID
-            }
-          }
-
-          // Store authentication
-          localStorage.setItem('magic_token', `user-${user.id}-${Date.now()}`);
-          localStorage.setItem('client_email', email);
-          localStorage.setItem('client_board_id', ticketBoardId);
-          localStorage.setItem('user_name', user.name);
-          localStorage.setItem('user_company', companyName);
-
-          setStatus('success');
-          setTimeout(() => {
-            router.push('/client/dashboard');
-          }, 1000);
-        } else {
-          setError('Invalid email or password');
-          setStatus('form');
-        }
+        setStatus('success');
+        setTimeout(() => {
+          router.push('/client/dashboard');
+        }, 1000);
       } else {
-        setError('Unable to authenticate. Please try again.');
+        setError('Invalid response from server');
         setStatus('form');
       }
     } catch (err) {

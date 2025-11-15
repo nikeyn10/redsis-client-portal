@@ -232,9 +232,10 @@ export default function CompanyManagement() {
       setCompanyName('');
       loadCompanies();
 
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to create company:', err);
-      alert('Failed to create company');
+      const errorMsg = err?.response?.errors?.[0]?.message || err?.message || 'Unknown error';
+      alert(`Failed to create company: ${errorMsg}`);
     } finally {
       setCreating(false);
     }
@@ -273,11 +274,16 @@ export default function CompanyManagement() {
         columnValues.dropdown_mkxpakmh = { labels: [editingCompany.ticketBoardId] };
       }
 
-      await executeMondayQuery(mutation, {
+      const response: any = await executeMondayQuery(mutation, {
         boardId: '18379404757',
         itemId: editingCompany.id,
         columnValues: JSON.stringify(columnValues)
       });
+
+      if (response.error || response.errors || response.data?.errors) {
+        const errorMsg = response.errors?.[0]?.message || response.data?.errors?.[0]?.message || response.error || 'Unknown error';
+        throw new Error(errorMsg);
+      }
 
       // Update name separately if changed
       if (editingCompany.name !== companies.find(c => c.id === editingCompany.id)?.name) {
@@ -304,9 +310,10 @@ export default function CompanyManagement() {
       setEditingCompany(null);
       loadCompanies();
 
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to update company:', err);
-      alert('Failed to update company');
+      const errorMsg = err?.response?.errors?.[0]?.message || err?.message || 'Unknown error';
+      alert(`Failed to update company: ${errorMsg}`);
     } finally {
       setUpdating(false);
     }

@@ -151,9 +151,10 @@ export default function ServiceProviderManagement() {
       });
       loadProviders();
 
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to create service provider:', err);
-      alert('Failed to create service provider');
+      const errorMsg = err?.response?.errors?.[0]?.message || err?.message || 'Unknown error';
+      alert(`Failed to create service provider: ${errorMsg}`);
     } finally {
       setCreating(false);
     }
@@ -226,9 +227,10 @@ export default function ServiceProviderManagement() {
       setEditingProvider(null);
       loadProviders();
 
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to update service provider:', err);
-      alert('Failed to update service provider');
+      const errorMsg = err?.response?.errors?.[0]?.message || err?.message || 'Unknown error';
+      alert(`Failed to update service provider: ${errorMsg}`);
     } finally {
       setUpdating(false);
     }

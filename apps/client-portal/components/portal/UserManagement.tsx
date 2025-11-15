@@ -161,11 +161,16 @@ export default function UserManagement() {
         columnValues.dropdown_mkxpsjwd = { labels: [selectedCompany.name] };
       }
 
-      await executeMondayQuery(mutation, {
+      const response: any = await executeMondayQuery(mutation, {
         boardId: '18379351659',
         itemName: userEmail,
         columnValues: JSON.stringify(columnValues)
       });
+
+      if (response.error || response.errors || response.data?.errors) {
+        const errorMsg = response.errors?.[0]?.message || response.data?.errors?.[0]?.message || response.error || 'Unknown error';
+        throw new Error(errorMsg);
+      }
 
       alert(`User "${userEmail}" created successfully!`);
       
@@ -177,9 +182,10 @@ export default function UserManagement() {
       setSelectedStatus('Active');
       loadUsers();
 
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to create user:', err);
-      alert('Failed to create user');
+      const errorMsg = err?.response?.errors?.[0]?.message || err?.message || 'Unknown error';
+      alert(`Failed to create user: ${errorMsg}`);
     } finally {
       setCreating(false);
     }
@@ -225,11 +231,16 @@ export default function UserManagement() {
         columnValues.text_mkxpxyrr = userPassword;
       }
 
-      await executeMondayQuery(mutation, {
+      const response: any = await executeMondayQuery(mutation, {
         boardId: '18379351659',
         itemId: editingUser.id,
         columnValues: JSON.stringify(columnValues)
       });
+
+      if (response.error || response.errors || response.data?.errors) {
+        const errorMsg = response.errors?.[0]?.message || response.data?.errors?.[0]?.message || response.error || 'Unknown error';
+        throw new Error(errorMsg);
+      }
 
       alert('User updated successfully!');
       
@@ -239,9 +250,10 @@ export default function UserManagement() {
       setSelectedCompanyId('');
       loadUsers();
 
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to update user:', err);
-      alert('Failed to update user');
+      const errorMsg = err?.response?.errors?.[0]?.message || err?.message || 'Unknown error';
+      alert(`Failed to update user: ${errorMsg}`);
     } finally {
       setUpdating(false);
     }
