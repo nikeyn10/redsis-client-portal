@@ -80,11 +80,11 @@ export default function CompanyManagement() {
           return {
             id: item.id,
             name: item.name,
-            ticketBoardId: cols.dropdown_mkxpakmh || cols.board_id || '',
+            ticketBoardId: cols.dropdown_mkxpakmh || '',
             status: cols.status || 'Active',
-            contactName: cols.contact_name || cols.text || '',
-            contactEmail: cols.contact_email || cols.email || '',
-            contactPhone: cols.contact_phone || cols.phone || '',
+            contactName: cols.text_mkxqv75c || '',
+            contactEmail: cols.email_mkxqs6z4 || '',
+            contactPhone: cols.phone_mkxqb808 || '',
             createdDate: item.created_at
           };
         });
@@ -221,7 +221,10 @@ export default function CompanyManagement() {
         itemName: companyName,
         columnValues: JSON.stringify({
           status: { label: 'Active' },
-          dropdown_mkxpakmh: { label: newBoardId }
+          dropdown_mkxpakmh: { label: newBoardId },
+          text_mkxqv75c: { text: editingCompany?.contactName || '' },
+          email_mkxqs6z4: { email: editingCompany?.contactEmail || '', text: editingCompany?.contactEmail || '' },
+          phone_mkxqb808: { phone: editingCompany?.contactPhone || '', countryShortName: 'US' }
         })
       });
 
@@ -263,7 +266,10 @@ export default function CompanyManagement() {
       `;
 
       const columnValues: any = {
-        status: { label: editingCompany.status }
+        status: { label: editingCompany.status },
+        text_mkxqv75c: { text: editingCompany.contactName || '' },
+        email_mkxqs6z4: { email: editingCompany.contactEmail || '', text: editingCompany.contactEmail || '' },
+        phone_mkxqb808: { phone: editingCompany.contactPhone || '', countryShortName: 'US' }
       };
 
       if (editingCompany.ticketBoardId) {

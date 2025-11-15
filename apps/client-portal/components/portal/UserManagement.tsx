@@ -79,9 +79,9 @@ export default function UserManagement() {
 
           return {
             id: item.id,
-            email: cols.text || item.name,
-            phone: cols.phone || cols.text4 || '',
-            company: cols.dropdown || '',
+            email: cols.email_mkxpm2m0 || item.name,
+            phone: cols.phone || '',
+            company: cols.dropdown_mkxpsjwd || '',
             companyId: '',
             status: cols.status || 'Active',
             createdDate: item.created_at
@@ -156,10 +156,10 @@ export default function UserManagement() {
         boardId: '18379351659',
         itemName: userEmail,
         columnValues: JSON.stringify({
-          text: { text: userEmail },
-          text4: { text: userPassword },
+          email_mkxpm2m0: { email: userEmail, text: userEmail },
+          text_mkxpxyrr: { text: userPassword },
           phone: { phone: userPhone, text: userPhone },
-          dropdown: { label: selectedCompany?.name || '' },
+          dropdown_mkxpsjwd: { labels: [selectedCompanyId] },
           status: { label: selectedStatus }
         })
       });
@@ -186,6 +186,7 @@ export default function UserManagement() {
     const company = companies.find(c => c.name === user.company);
     setEditingUser({ ...user });
     setSelectedCompanyId(company?.id || '');
+    setUserPassword(''); // Clear password field for optional update
     setShowEditUser(true);
   };
 
@@ -210,14 +211,14 @@ export default function UserManagement() {
       const selectedCompany = companies.find(c => c.id === selectedCompanyId);
 
       const columnValues: any = {
-        text: { text: editingUser.email },
+        email_mkxpm2m0: { email: editingUser.email, text: editingUser.email },
         phone: { phone: editingUser.phone || '', text: editingUser.phone || '' },
-        dropdown: { label: selectedCompany?.name || '' },
+        dropdown_mkxpsjwd: { labels: [selectedCompanyId] },
         status: { label: editingUser.status }
       };
 
       if (userPassword) {
-        columnValues.text4 = { text: userPassword };
+        columnValues.text_mkxpxyrr = { text: userPassword };
       }
 
       await executeMondayQuery(mutation, {
