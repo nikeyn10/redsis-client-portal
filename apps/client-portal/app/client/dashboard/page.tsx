@@ -9,29 +9,7 @@ import TicketList from '@/components/TicketList';
 import NewTicketForm from '@/components/NewTicketForm';
 import { Download, FileSpreadsheet, FileText, BarChart3, Clock, Plus, LogOut, Check } from 'lucide-react';
 import type { Ticket } from '@/types';
-import { fetchBoardColumns, getColumnIdByTitle, type BoardColumn } from '@/lib/board-columns';
-
-// Direct Monday API call for client portal (not embedded in Monday)
-async function callMondayAPI(query: string, variables?: Record<string, any>) {
-  const response = await fetch('https://api.monday.com/v2', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': process.env.NEXT_PUBLIC_MONDAY_API_TOKEN || '',
-      'API-Version': '2023-10'
-    },
-    body: JSON.stringify({ query, variables })
-  });
-
-  const result = await response.json();
-  
-  if (result.errors) {
-    console.error('Monday API errors:', result.errors);
-    throw new Error(result.errors[0]?.message || 'Monday API error');
-  }
-  
-  return result;
-}
+import { getColumnIdByTitle, type BoardColumn } from '@/lib/board-columns';
 
 export default function ClientDashboard() {
   const router = useRouter();
@@ -175,8 +153,14 @@ End of Report
     try {
       setLoading(true);
 
-      // Fetch board columns
-      const columns = await fetchBoardColumns(boardId);
+      // Fetch board columns via API route
+      const columnsResponse = await fetch(`/api/board-columns?boardId=${boardId}`);
+      if (!columnsResponse.ok) {
+        throw new Error('Failed to fetch board columns');
+      }
+      const columnsData = await columnsResponse.json();
+      const columns = columnsData.data?.boards?.[0]?.columns || [];
+      
       setBoardColumns(columns);
       console.log('📋 Board columns loaded:', columns);
 
@@ -193,7 +177,15 @@ End of Report
   const loadTickets = async (boardId: string, email: string, columns?: BoardColumn[]) => {
     try {
       // Use provided columns or fetch them
-      const cols = columns || await fetchBoardColumns(boardId);
+      let cols = columns;
+      if (!cols || cols.length === 0) {
+        const columnsResponse = await fetch(`/api/board-columns?boardId=${boardId}`);
+        if (!columnsResponse.ok) {
+          throw new Error('Failed to fetch board columns');
+        }
+        const columnsData = await columnsResponse.json();
+        cols = columnsData.data?.boards?.[0]?.columns || [];
+      }
       
       // Find column IDs dynamically
       const emailColId = getColumnIdByTitle(cols, 'Client Email') || 
@@ -216,29 +208,14 @@ End of Report
         description: descriptionColId
       });
 
-      const query = `
-        query GetBoardItems($boardId: [ID!]!) {
-          boards(ids: $boardId) {
-            items_page(limit: 100) {
-              items {
-                id
-                name
-                column_values {
-                  id
-                  text
-                  value
-                }
-                created_at
-                updated_at
-              }
-            }
-          }
-        }
-      `;
-
-      const response = await callMondayAPI(query, {
-        boardId: [boardId]
-      });
+      // Fetch tickets via API route
+      const ticketsResponse = await fetch(`/api/tickets?boardId=${boardId}`);
+      if (!ticketsResponse.ok) {
+        const errorData = await ticketsResponse.json();
+        throw new Error(errorData.error || 'Failed to fetch tickets');
+      }
+      
+      const response = await ticketsResponse.json();
 
       if (response.data?.boards?.[0]?.items_page?.items) {
         const items = response.data.boards[0].items_page.items;
@@ -318,19 +295,6 @@ End of Report
                               getColumnIdByTitle(boardColumns, 'Long Text') || 
                               'long_text_mkxpgg6q';
 
-      const mutation = `
-        mutation CreateItem($boardId: ID!, $itemName: String!, $columnValues: JSON!) {
-          create_item(
-            board_id: $boardId,
-            item_name: $itemName,
-            column_values: $columnValues
-          ) {
-            id
-            created_at
-          }
-        }
-      `;
-
       // Map priority to proper status labels
       const priorityLabels: Record<string, string> = {
         low: 'Low',
@@ -351,13 +315,26 @@ End of Report
 
       console.log('📊 Column values to set:', JSON.stringify(columnValues, null, 2));
 
-      const response = await callMondayAPI(mutation, {
-        boardId: targetBoardId,
-        itemName: ticketData.title,
-        columnValues: JSON.stringify(columnValues)
+      // Create ticket via API route
+      const response = await fetch('/api/tickets', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          boardId: targetBoardId,
+          itemName: ticketData.title,
+          columnValues: columnValues
+        }),
       });
 
-      const newItem = response.data?.create_item;
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to create ticket');
+      }
+
+      const result = await response.json();
+      const newItem = result.data?.create_item;
 
       console.log('✅ Ticket created successfully:', newItem);
       alert('Ticket created successfully! We will review it shortly.');
