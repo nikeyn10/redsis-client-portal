@@ -1,4 +1,4 @@
-# Gorilla-Style Client Portal for Monday.com
+Client Portal for Monday.com
 
 A comprehensive client support portal powered entirely by monday.com infrastructure - offering both **standalone guest access** and **embedded monday.com app** functionality.
 
