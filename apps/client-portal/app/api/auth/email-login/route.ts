@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const MONDAY_API_TOKEN = process.env.MONDAY_API_TOKEN || '';
+const MONDAY_API_TOKEN = process.env.NEXT_PUBLIC_MONDAY_API_TOKEN || process.env.MONDAY_API_TOKEN || '';
 const USER_BOARD_ID = '18379351659';
 
 async function executeMondayQuery(query: string, variables?: Record<string, any>) {
+  if (!MONDAY_API_TOKEN) {
+    throw new Error('Monday API token is not configured');
+  }
+
   const response = await fetch('https://api.monday.com/v2', {
     method: 'POST',
     headers: {
