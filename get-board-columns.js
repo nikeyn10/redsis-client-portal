@@ -1,11 +1,11 @@
 /**
  * Script to fetch Monday board columns and their IDs
  * 
- * Usage: node get-board-columns.js
+ * Usage: node get-board-columns.js [BOARD_ID]
  */
 
 const MONDAY_API_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjU1NTc2MDI1MywiYWFpIjoxMSwidWlkIjoxMjAxMzQ2LCJpYWQiOiIyMDI1LTA4LTI4VDE5OjEyOjIyLjAwMFoiLCJwZXIiOiJtZTp3cml0ZSIsImFjdGlkIjo0OTQ2NjQsInJnbiI6InVzZTEifQ.cpWq8MCHJi-rYRPIB2T-UgD_SkJjQqsW0StEdWzSdjI';
-const BOARD_ID = '18379404757'; // Company board
+const BOARD_ID = process.argv[2] || '18379404757'; // Get from command line or use default
 
 async function getBoardColumns() {
   const query = `

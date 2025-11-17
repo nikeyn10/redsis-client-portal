@@ -1,0 +1,489 @@
+{
+  "id": "18379351659",
+  "name": "Users",
+  "description": null,
+  "board_kind": "public",
+  "state": "active",
+  "metadata": {
+    "total_columns": 8,
+    "total_groups": 1,
+    "total_items": 8,
+    "total_views": 0
+  },
+  "columns": [
+    {
+      "id": "name",
+      "title": "Name",
+      "type": "name",
+      "settings": "{}"
+    },
+    {
+      "id": "status",
+      "title": "Status",
+      "type": "status",
+      "settings": "{\"done_colors\":[1],\"labels\":{\"0\":\"Pending Approval\",\"1\":\"Access Granted\",\"2\":\"Access Revoked\"},\"labels_positions_v2\":{\"0\":0,\"1\":2,\"2\":1,\"5\":3},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"}}}"
+    },
+    {
+      "id": "date4",
+      "title": "Date",
+      "type": "date",
+      "settings": "{}"
+    },
+    {
+      "id": "email_mkxpm2m0",
+      "title": "User Email",
+      "type": "email",
+      "settings": "{}"
+    },
+    {
+      "id": "text_mkxpxyrr",
+      "title": "Password",
+      "type": "text",
+      "settings": "{}"
+    },
+    {
+      "id": "dropdown_mkxpsjwd",
+      "title": "Company",
+      "type": "dropdown",
+      "settings": "{\"limit_select\":false,\"labels\":[{\"id\":1,\"name\":\"Redsis\"},{\"id\":2,\"name\":\"RSI\"},{\"id\":3,\"name\":\"Chase\"},{\"id\":4,\"name\":\"Chedraui\"}],\"deactivated_labels\":[],\"label_limit_count\":1}"
+    },
+    {
+      "id": "dropdown_mkxrn759",
+      "title": "First Name",
+      "type": "dropdown",
+      "settings": "{\"limit_select\":true,\"labels\":[{\"id\":1,\"name\":\"Mike\"}],\"deactivated_labels\":[],\"label_limit_count\":1}"
+    },
+    {
+      "id": "dropdown_mkxr9kyr",
+      "title": "Last Name",
+      "type": "dropdown",
+      "settings": "{\"limit_select\":true,\"labels\":[{\"id\":1,\"name\":\"Habib\"}],\"deactivated_labels\":[],\"label_limit_count\":1}"
+    }
+  ],
+  "groups": [
+    {
+      "id": "topics",
+      "title": "Group Title",
+      "position": "65536"
+    }
+  ],
+  "items": [
+    {
+      "id": "10566214099",
+      "name": "mikehabib@redsis.com",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Access Granted",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-14T17:34:17.253Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "2025-11-10",
+          "value": "{\"date\":\"2025-11-10\",\"icon\":null,\"changed_at\":\"2025-11-14T17:29:13.198Z\"}"
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "type": "email",
+          "text": "mikehabib@redsis.com",
+          "value": "{\"text\":\"mikehabib@redsis.com\",\"email\":\"mikehabib@redsis.com\",\"changed_at\":\"2025-11-16T19:43:35.718Z\"}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "type": "text",
+          "text": "12345",
+          "value": "\"12345\""
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "type": "dropdown",
+          "text": "Chedraui, Redsis, RSI, Chase",
+          "value": "{\"ids\":[4,1,2,3]}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "type": "dropdown",
+          "text": "Mike",
+          "value": "{\"ids\":[1]}"
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "type": "dropdown",
+          "text": "Habib",
+          "value": "{\"ids\":[1]}"
+        }
+      ]
+    },
+    {
+      "id": "10566207371",
+      "name": "cgiraldo@redsis.com",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Access Granted",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-14T22:00:29.933Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "2025-11-11",
+          "value": "{\"date\":\"2025-11-11\",\"icon\":null,\"changed_at\":\"2025-11-14T17:29:13.580Z\"}"
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "type": "email",
+          "text": "cgiraldo@redsis.com",
+          "value": "{\"text\":\"cgiraldo@redsis.com\",\"email\":\"cgiraldo@redsis.com\",\"changed_at\":\"2025-11-14T17:33:49.998Z\"}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "type": "text",
+          "text": "12345",
+          "value": "\"12345\""
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "type": "dropdown",
+          "text": "RSI, Redsis",
+          "value": "{\"ids\":[2,1]}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "10566210693",
+      "name": "nmartinez@redsis.com",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Access Granted",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-14T17:34:18.685Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "2025-11-10",
+          "value": "{\"date\":\"2025-11-10\",\"icon\":null,\"changed_at\":\"2025-11-14T17:29:13.198Z\"}"
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "type": "email",
+          "text": "nmartinez@redsis.com",
+          "value": "{\"text\":\"nmartinez@redsis.com\",\"email\":\"nmartinez@redsis.com\",\"changed_at\":\"2025-11-14T17:34:03.992Z\"}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "type": "text",
+          "text": "12345",
+          "value": "\"12345\""
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "type": "dropdown",
+          "text": "Redsis",
+          "value": "{\"ids\":[1]}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18379369599",
+      "name": "bromero@redsis.com",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Pending Approval",
+          "value": "{\"index\":0,\"post_id\":null,\"changed_at\":\"2025-11-14T20:50:29.116Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "type": "email",
+          "text": "bromero@redsis.com",
+          "value": "{\"text\":\"bromero@redsis.com\",\"email\":\"bromero@redsis.com\",\"changed_at\":\"2025-11-14T17:39:20.946Z\"}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "type": "text",
+          "text": "12345",
+          "value": "\"12345\""
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "type": "dropdown",
+          "text": "Redsis, Chase",
+          "value": "{\"ids\":[1,3]}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18379372618",
+      "name": "soporte@redsis.com",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Access Granted",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-14T17:40:52.702Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "type": "email",
+          "text": "soporte@redsis.com",
+          "value": "{\"text\":\"soporte@redsis.com\",\"email\":\"soporte@redsis.com\",\"changed_at\":\"2025-11-14T17:40:57.289Z\"}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "type": "text",
+          "text": "12345",
+          "value": "\"12345\""
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "type": "dropdown",
+          "text": "Chase, RSI",
+          "value": "{\"ids\":[3,2]}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18379390573",
+      "name": "dvillamil@redsis.com",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Access Granted",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-14T17:51:00.181Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "type": "email",
+          "text": "dvillamil@redsis.com",
+          "value": "{\"text\":\"dvillamil@redsis.com\",\"email\":\"dvillamil@redsis.com\",\"changed_at\":\"2025-11-14T17:51:05.990Z\"}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "type": "text",
+          "text": "12345",
+          "value": "\"12345\""
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "type": "dropdown",
+          "text": "Redsis, Chedraui",
+          "value": "{\"ids\":[1,4]}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18379391601",
+      "name": "jrodgers@redsis.com",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Access Granted",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-14T17:51:35.714Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "type": "email",
+          "text": "jrodgers@redsis.com",
+          "value": "{\"text\":\"jrodgers@redsis.com\",\"email\":\"jrodgers@redsis.com\",\"changed_at\":\"2025-11-14T17:51:41.130Z\"}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "type": "text",
+          "text": "12345",
+          "value": "\"12345\""
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "type": "dropdown",
+          "text": "Redsis",
+          "value": "{\"ids\":[1]}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18380047302",
+      "name": "jlplata@redsis.com",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Access Granted",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-15T18:22:17.651Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "type": "email",
+          "text": "jlplata@redsis.com",
+          "value": "{\"text\":\"jlplata@redsis.com\",\"email\":\"jlplata@redsis.com\",\"changed_at\":\"2025-11-15T18:22:46.593Z\"}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "type": "text",
+          "text": "12345",
+          "value": "\"12345\""
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "type": "dropdown",
+          "text": "Redsis",
+          "value": "{\"ids\":[1]}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    }
+  ],
+  "views": []
+}

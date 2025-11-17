@@ -1,0 +1,376 @@
+{
+  "id": "18379404757",
+  "name": "Project Creator",
+  "description": null,
+  "board_kind": "public",
+  "state": "active",
+  "metadata": {
+    "total_columns": 9,
+    "total_groups": 1,
+    "total_items": 5,
+    "total_views": 1
+  },
+  "columns": [
+    {
+      "id": "name",
+      "title": "Name",
+      "type": "name",
+      "settings": "{}"
+    },
+    {
+      "id": "status",
+      "title": "Status",
+      "type": "status",
+      "settings": "{\"done_colors\":[1],\"deactivated_labels\":[],\"color_mapping\":{\"0\":2,\"2\":12,\"12\":0,\"101\":101},\"labels\":{\"0\":\"DeActivated\",\"1\":\"Active\"},\"labels_positions_v2\":{\"0\":0,\"1\":1,\"5\":2},\"labels_colors\":{\"0\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"}}}"
+    },
+    {
+      "id": "date4",
+      "title": "Date",
+      "type": "date",
+      "settings": "{}"
+    },
+    {
+      "id": "dropdown_mkxpakmh",
+      "title": "Board ID",
+      "type": "dropdown",
+      "settings": "{\"limit_select\":false,\"labels\":[{\"id\":1,\"name\":\"18379446736\"},{\"id\":2,\"name\":\"18379754041\"},{\"id\":3,\"name\":\"18379873697\"},{\"id\":4,\"name\":\"18379880102\"},{\"id\":5,\"name\":\"18380098330\"},{\"id\":6,\"name\":\"18380268500\"}],\"deactivated_labels\":[]}"
+    },
+    {
+      "id": "button_mkxpx5k6",
+      "title": "Create Board",
+      "type": "button",
+      "settings": "{\"color\":\"#0086c0\",\"buttonText\":\"Create Project Board\"}"
+    },
+    {
+      "id": "text_mkxqv75c",
+      "title": "Main Contact Name",
+      "type": "text",
+      "settings": "{}"
+    },
+    {
+      "id": "email_mkxqs6z4",
+      "title": "Main Contact Email",
+      "type": "email",
+      "settings": "{}"
+    },
+    {
+      "id": "phone_mkxqb808",
+      "title": "Main Contact Phone",
+      "type": "phone",
+      "settings": "{}"
+    },
+    {
+      "id": "dropdown_mkxrwmpq",
+      "title": "Company",
+      "type": "dropdown",
+      "settings": "{}"
+    }
+  ],
+  "groups": [
+    {
+      "id": "topics",
+      "title": "Group Title",
+      "position": "65536"
+    }
+  ],
+  "items": [
+    {
+      "id": "10566517524",
+      "name": "Redsis",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Active",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-14T18:24:50.037Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "2025-11-17",
+          "value": "{\"date\":\"2025-11-17\",\"icon\":null,\"changed_at\":\"2025-11-14T17:59:03.047Z\"}"
+        },
+        {
+          "id": "dropdown_mkxpakmh",
+          "type": "dropdown",
+          "text": "18379873697",
+          "value": "{\"ids\":[3]}"
+        },
+        {
+          "id": "button_mkxpx5k6",
+          "type": "button",
+          "text": "Create Project Board",
+          "value": "{\"clicks\":4,\"changed_at\":\"2025-11-14T20:36:05.430Z\"}"
+        },
+        {
+          "id": "text_mkxqv75c",
+          "type": "text",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxqs6z4",
+          "type": "email",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "phone_mkxqb808",
+          "type": "phone",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxrwmpq",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "10566517448",
+      "name": "RSI",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Active",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2019-03-01T17:28:23.178Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "2025-11-11",
+          "value": "{\"date\":\"2025-11-11\",\"icon\":null,\"changed_at\":\"2025-11-14T17:59:02.434Z\"}"
+        },
+        {
+          "id": "dropdown_mkxpakmh",
+          "type": "dropdown",
+          "text": "18379754041",
+          "value": "{\"ids\":[2]}"
+        },
+        {
+          "id": "button_mkxpx5k6",
+          "type": "button",
+          "text": "Create Project Board",
+          "value": "{\"clicks\":1,\"changed_at\":\"2025-11-14T21:42:58.467Z\"}"
+        },
+        {
+          "id": "text_mkxqv75c",
+          "type": "text",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxqs6z4",
+          "type": "email",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "phone_mkxqb808",
+          "type": "phone",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxrwmpq",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "10566526868",
+      "name": "VOI",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Active",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-16T20:08:04.425Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "2025-11-16",
+          "value": "{\"date\":\"2025-11-16\",\"icon\":null,\"changed_at\":\"2025-11-14T17:59:02.757Z\"}"
+        },
+        {
+          "id": "dropdown_mkxpakmh",
+          "type": "dropdown",
+          "text": "18379880102",
+          "value": "{\"ids\":[4]}"
+        },
+        {
+          "id": "button_mkxpx5k6",
+          "type": "button",
+          "text": "Create Project Board",
+          "value": "{\"clicks\":1,\"changed_at\":\"2025-11-15T00:52:09.140Z\"}"
+        },
+        {
+          "id": "text_mkxqv75c",
+          "type": "text",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxqs6z4",
+          "type": "email",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "phone_mkxqb808",
+          "type": "phone",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxrwmpq",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18380098310",
+      "name": "Chedraui",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Active",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-15T23:03:19.742Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxpakmh",
+          "type": "dropdown",
+          "text": "18380098330",
+          "value": "{\"ids\":[5]}"
+        },
+        {
+          "id": "button_mkxpx5k6",
+          "type": "button",
+          "text": "Create Project Board",
+          "value": "{\"clicks\":1,\"changed_at\":\"2025-11-15T23:03:22.667Z\"}"
+        },
+        {
+          "id": "text_mkxqv75c",
+          "type": "text",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxqs6z4",
+          "type": "email",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "phone_mkxqb808",
+          "type": "phone",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxrwmpq",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18380268481",
+      "name": "Chase",
+      "group": {
+        "id": "topics",
+        "title": "Group Title"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Active",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-16T18:11:01.641Z\"}"
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxpakmh",
+          "type": "dropdown",
+          "text": "18380268500",
+          "value": "{\"ids\":[6]}"
+        },
+        {
+          "id": "button_mkxpx5k6",
+          "type": "button",
+          "text": "Create Project Board",
+          "value": "{\"clicks\":1,\"changed_at\":\"2025-11-16T18:10:20.906Z\"}"
+        },
+        {
+          "id": "text_mkxqv75c",
+          "type": "text",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxqs6z4",
+          "type": "email",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "phone_mkxqb808",
+          "type": "phone",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxrwmpq",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "222834632",
+      "name": "Client Portal Mike 5",
+      "type": "FeatureBoardView",
+      "settings_str": "{}"
+    }
+  ]
+}

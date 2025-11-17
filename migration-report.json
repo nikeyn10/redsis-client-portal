@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-11-17T01:21:20.485Z",
+  "summary": {
+    "sites_created": 5,
+    "projects_created": 5,
+    "total_tickets_counted": 8
+  },
+  "sites": [
+    {
+      "id": "10575117091",
+      "name": "Redsis",
+      "tickets": 7
+    },
+    {
+      "id": "10575113848",
+      "name": "RSI",
+      "tickets": 0
+    },
+    {
+      "id": "10575117303",
+      "name": "VOI",
+      "tickets": 0
+    },
+    {
+      "id": "10575113793",
+      "name": "Chedraui",
+      "tickets": 0
+    },
+    {
+      "id": "10575144833",
+      "name": "Chase",
+      "tickets": 0
+    }
+  ],
+  "projects": [
+    {
+      "id": "10575116995",
+      "name": "Redsis - Main Project",
+      "site_id": "10575117091",
+      "site_name": "Redsis"
+    },
+    {
+      "id": "10575117065",
+      "name": "RSI - Main Project",
+      "site_id": "10575113848",
+      "site_name": "RSI"
+    },
+    {
+      "id": "10575117211",
+      "name": "VOI - Main Project",
+      "site_id": "10575117303",
+      "site_name": "VOI"
+    },
+    {
+      "id": "10575117239",
+      "name": "Chedraui - Main Project",
+      "site_id": "10575113793",
+      "site_name": "Chedraui"
+    },
+    {
+      "id": "10575117263",
+      "name": "Chase - Main Project",
+      "site_id": "10575144833",
+      "site_name": "Chase"
+    }
+  ],
+  "ticket_distribution": {
+    "Unknown": 1,
+    "Redsis": 7
+  },
+  "board_ids": {
+    "sites_board": "18380394514",
+    "projects_board": "18380394647",
+    "project_creator_board": "18379404757",
+    "management_portal_board": "18379040651"
+  }
+}

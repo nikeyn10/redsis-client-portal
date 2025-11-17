@@ -1,0 +1,588 @@
+{
+  "workspace_id": "13302651",
+  "generated_at": "2025-11-16T22:25:21.663Z",
+  "all_boards": [
+    {
+      "id": "18380268500",
+      "name": "Chase",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    },
+    {
+      "id": "18380098330",
+      "name": "Chedraui",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    },
+    {
+      "id": "18379880102",
+      "name": "VOI",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    },
+    {
+      "id": "18379873697",
+      "name": "Redsis",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    },
+    {
+      "id": "18379754041",
+      "name": "RSI",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    },
+    {
+      "id": "18379446736",
+      "name": "Service Providers",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    },
+    {
+      "id": "18379404757",
+      "name": "Project Creator",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    },
+    {
+      "id": "18379351659",
+      "name": "Users",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    },
+    {
+      "id": "18379040651",
+      "name": "Management Portal",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "workspace": {
+        "id": "13302651",
+        "name": "Redix Central Hub"
+      }
+    }
+  ],
+  "categorized_boards": {
+    "COMPANIES": [
+      {
+        "id": "18379404757",
+        "name": "Project Creator",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      }
+    ],
+    "SITES": [],
+    "PROJECTS": [],
+    "USERS": [
+      {
+        "id": "18379351659",
+        "name": "Users",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      }
+    ],
+    "SERVICE_PROVIDERS": [
+      {
+        "id": "18379446736",
+        "name": "Service Providers",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      }
+    ],
+    "TICKETS": [
+      {
+        "id": "18379040651",
+        "name": "Management Portal",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      }
+    ],
+    "OTHER": [
+      {
+        "id": "18380268500",
+        "name": "Chase",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      },
+      {
+        "id": "18380098330",
+        "name": "Chedraui",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      },
+      {
+        "id": "18379880102",
+        "name": "VOI",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      },
+      {
+        "id": "18379873697",
+        "name": "Redsis",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      },
+      {
+        "id": "18379754041",
+        "name": "RSI",
+        "description": null,
+        "board_kind": "public",
+        "state": "active",
+        "workspace": {
+          "id": "13302651",
+          "name": "Redix Central Hub"
+        }
+      }
+    ]
+  },
+  "detailed_analysis": {
+    "SERVICE_PROVIDERS": {
+      "id": "18379446736",
+      "name": "Service Providers",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Name",
+          "type": "name",
+          "settings_str": "{}"
+        },
+        {
+          "id": "status",
+          "title": "Status",
+          "type": "status",
+          "settings_str": "{\"done_colors\":[1],\"deactivated_labels\":[],\"color_mapping\":{\"2\":158,\"15\":2,\"158\":15},\"labels\":{\"0\":\"On Leave\",\"1\":\"Active\",\"2\":\"Inactive\"},\"labels_positions_v2\":{\"0\":0,\"1\":1,\"2\":3,\"5\":2},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#a1e3f6\",\"border\":\"#a1e3f6\",\"var_name\":\"sail\"}}}"
+        },
+        {
+          "id": "email_mkxpawg3",
+          "title": "Email",
+          "type": "email",
+          "settings_str": "{}"
+        },
+        {
+          "id": "phone_mkxpec5j",
+          "title": "Phone",
+          "type": "phone",
+          "settings_str": "{}"
+        },
+        {
+          "id": "text_mkxpb7j4",
+          "title": "Password",
+          "type": "text",
+          "settings_str": "{}"
+        },
+        {
+          "id": "dropdown_mkxpdbxw",
+          "title": "Specialization",
+          "type": "dropdown",
+          "settings_str": "{\"limit_select\":false,\"labels\":[{\"id\":1,\"name\":\"General Support\"},{\"id\":2,\"name\":\"Network Specialist\"},{\"id\":3,\"name\":\"Hardware Technician\"}],\"deactivated_labels\":[]}"
+        },
+        {
+          "id": "numeric_mkxp72jc",
+          "title": "Assigned Tickets",
+          "type": "numbers",
+          "settings_str": "{}"
+        }
+      ],
+      "groups": [
+        {
+          "id": "topics",
+          "title": "Tickets",
+          "position": "65536"
+        },
+        {
+          "id": "group_mkxpbz9k",
+          "title": "Resolved",
+          "position": "131072.0"
+        }
+      ],
+      "items_page": {
+        "items": [
+          {
+            "id": "18379661718",
+            "name": "Service Provider 1"
+          },
+          {
+            "id": "18379772332",
+            "name": "SP 2"
+          },
+          {
+            "id": "18379772602",
+            "name": "dgxcfhvgjbknl"
+          }
+        ]
+      },
+      "automations": []
+    },
+    "PROJECT_CREATOR": {
+      "id": "18379404757",
+      "name": "Project Creator",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Name",
+          "type": "name",
+          "settings_str": "{}"
+        },
+        {
+          "id": "status",
+          "title": "Status",
+          "type": "status",
+          "settings_str": "{\"done_colors\":[1],\"deactivated_labels\":[],\"color_mapping\":{\"0\":2,\"2\":12,\"12\":0,\"101\":101},\"labels\":{\"0\":\"DeActivated\",\"1\":\"Active\"},\"labels_positions_v2\":{\"0\":0,\"1\":1,\"5\":2},\"labels_colors\":{\"0\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"}}}"
+        },
+        {
+          "id": "date4",
+          "title": "Date",
+          "type": "date",
+          "settings_str": "{}"
+        },
+        {
+          "id": "dropdown_mkxpakmh",
+          "title": "Board ID",
+          "type": "dropdown",
+          "settings_str": "{\"limit_select\":false,\"labels\":[{\"id\":1,\"name\":\"18379446736\"},{\"id\":2,\"name\":\"18379754041\"},{\"id\":3,\"name\":\"18379873697\"},{\"id\":4,\"name\":\"18379880102\"},{\"id\":5,\"name\":\"18380098330\"},{\"id\":6,\"name\":\"18380268500\"}],\"deactivated_labels\":[]}"
+        },
+        {
+          "id": "button_mkxpx5k6",
+          "title": "Create Board",
+          "type": "button",
+          "settings_str": "{\"color\":\"#0086c0\",\"buttonText\":\"Create Project Board\"}"
+        },
+        {
+          "id": "text_mkxqv75c",
+          "title": "Main Contact Name",
+          "type": "text",
+          "settings_str": "{}"
+        },
+        {
+          "id": "email_mkxqs6z4",
+          "title": "Main Contact Email",
+          "type": "email",
+          "settings_str": "{}"
+        },
+        {
+          "id": "phone_mkxqb808",
+          "title": "Main Contact Phone",
+          "type": "phone",
+          "settings_str": "{}"
+        },
+        {
+          "id": "dropdown_mkxrwmpq",
+          "title": "Company",
+          "type": "dropdown",
+          "settings_str": "{}"
+        }
+      ],
+      "groups": [
+        {
+          "id": "topics",
+          "title": "Group Title",
+          "position": "65536"
+        }
+      ],
+      "items_page": {
+        "items": [
+          {
+            "id": "10566517524",
+            "name": "Redsis"
+          },
+          {
+            "id": "10566517448",
+            "name": "RSI"
+          },
+          {
+            "id": "10566526868",
+            "name": "VOI"
+          },
+          {
+            "id": "18380098310",
+            "name": "Chedraui"
+          },
+          {
+            "id": "18380268481",
+            "name": "Chase"
+          }
+        ]
+      },
+      "automations": []
+    },
+    "USERS": {
+      "id": "18379351659",
+      "name": "Users",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Name",
+          "type": "name",
+          "settings_str": "{}"
+        },
+        {
+          "id": "status",
+          "title": "Status",
+          "type": "status",
+          "settings_str": "{\"done_colors\":[1],\"labels\":{\"0\":\"Pending Approval\",\"1\":\"Access Granted\",\"2\":\"Access Revoked\"},\"labels_positions_v2\":{\"0\":0,\"1\":2,\"2\":1,\"5\":3},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"}}}"
+        },
+        {
+          "id": "date4",
+          "title": "Date",
+          "type": "date",
+          "settings_str": "{}"
+        },
+        {
+          "id": "email_mkxpm2m0",
+          "title": "User Email",
+          "type": "email",
+          "settings_str": "{}"
+        },
+        {
+          "id": "text_mkxpxyrr",
+          "title": "Password",
+          "type": "text",
+          "settings_str": "{}"
+        },
+        {
+          "id": "dropdown_mkxpsjwd",
+          "title": "Company",
+          "type": "dropdown",
+          "settings_str": "{\"limit_select\":false,\"labels\":[{\"id\":1,\"name\":\"Redsis\"},{\"id\":2,\"name\":\"RSI\"},{\"id\":3,\"name\":\"Chase\"},{\"id\":4,\"name\":\"Chedraui\"}],\"deactivated_labels\":[],\"label_limit_count\":1}"
+        },
+        {
+          "id": "dropdown_mkxrn759",
+          "title": "First Name",
+          "type": "dropdown",
+          "settings_str": "{\"limit_select\":true,\"labels\":[{\"id\":1,\"name\":\"Mike\"}],\"deactivated_labels\":[],\"label_limit_count\":1}"
+        },
+        {
+          "id": "dropdown_mkxr9kyr",
+          "title": "Last Name",
+          "type": "dropdown",
+          "settings_str": "{\"limit_select\":true,\"labels\":[{\"id\":1,\"name\":\"Habib\"}],\"deactivated_labels\":[],\"label_limit_count\":1}"
+        }
+      ],
+      "groups": [
+        {
+          "id": "topics",
+          "title": "Group Title",
+          "position": "65536"
+        }
+      ],
+      "items_page": {
+        "items": [
+          {
+            "id": "10566214099",
+            "name": "mikehabib@redsis.com"
+          },
+          {
+            "id": "10566207371",
+            "name": "cgiraldo@redsis.com"
+          },
+          {
+            "id": "10566210693",
+            "name": "nmartinez@redsis.com"
+          },
+          {
+            "id": "18379369599",
+            "name": "bromero@redsis.com"
+          },
+          {
+            "id": "18379372618",
+            "name": "soporte@redsis.com"
+          }
+        ]
+      },
+      "automations": []
+    },
+    "MANAGEMENT_PORTAL": {
+      "id": "18379040651",
+      "name": "Management Portal",
+      "description": null,
+      "board_kind": "public",
+      "state": "active",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Name",
+          "type": "name",
+          "settings_str": "{}"
+        },
+        {
+          "id": "status",
+          "title": "Status",
+          "type": "status",
+          "settings_str": "{\"done_colors\":[1],\"deactivated_labels\":[],\"color_mapping\":{\"2\":158,\"15\":2,\"158\":15},\"labels\":{\"0\":\"In Progress\",\"1\":\"Resolved\",\"7\":\"Open\"},\"labels_positions_v2\":{\"0\":1,\"1\":2,\"5\":3,\"7\":0},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"7\":{\"color\":\"#579bfc\",\"border\":\"#4387e8\",\"var_name\":\"bright-blue\"}}}"
+        },
+        {
+          "id": "date4",
+          "title": "Date",
+          "type": "date",
+          "settings_str": "{}"
+        },
+        {
+          "id": "email_mkxpawg3",
+          "title": "client_email",
+          "type": "email",
+          "settings_str": "{}"
+        },
+        {
+          "id": "color_mkxp805g",
+          "title": "priority",
+          "type": "status",
+          "settings_str": "{\"done_colors\":[1],\"labels\":{\"0\":\"High\",\"1\":\"Done\",\"2\":\"Urgent\",\"7\":\"Medium\"},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"},\"7\":{\"color\":\"#579bfc\",\"border\":\"#4387e8\",\"var_name\":\"bright-blue\"}}}"
+        },
+        {
+          "id": "long_text_mkxpgg6q",
+          "title": "Description Of Problem",
+          "type": "long_text",
+          "settings_str": "{}"
+        },
+        {
+          "id": "dropdown_mkxrzw2w",
+          "title": "Machine Type",
+          "type": "dropdown",
+          "settings_str": "{}"
+        },
+        {
+          "id": "file_mkxqyqg0",
+          "title": "Attachments",
+          "type": "file",
+          "settings_str": "{}"
+        }
+      ],
+      "groups": [
+        {
+          "id": "topics",
+          "title": "Open Tickets",
+          "position": "65536"
+        },
+        {
+          "id": "group_mkxrxv43",
+          "title": "In Progress",
+          "position": "81920.0"
+        },
+        {
+          "id": "group_title",
+          "title": "Current Month Resolved Tickets",
+          "position": "98304"
+        }
+      ],
+      "items_page": {
+        "items": [
+          {
+            "id": "10564632398",
+            "name": "1234582"
+          },
+          {
+            "id": "10564635023",
+            "name": "345678"
+          },
+          {
+            "id": "10564634688",
+            "name": "323456"
+          },
+          {
+            "id": "10564632493",
+            "name": "123456"
+          },
+          {
+            "id": "10564634637",
+            "name": "123456"
+          }
+        ]
+      },
+      "automations": []
+    }
+  },
+  "summary": {
+    "total_boards": 9,
+    "analyzed_boards": 4,
+    "potential_issues": 8
+  }
+}

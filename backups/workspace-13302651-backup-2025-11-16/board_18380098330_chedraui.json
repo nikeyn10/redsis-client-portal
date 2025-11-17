@@ -1,0 +1,153 @@
+{
+  "id": "18380098330",
+  "name": "Chedraui",
+  "description": null,
+  "board_kind": "public",
+  "state": "active",
+  "metadata": {
+    "total_columns": 6,
+    "total_groups": 2,
+    "total_items": 2,
+    "total_views": 1
+  },
+  "columns": [
+    {
+      "id": "name",
+      "title": "Name",
+      "type": "name",
+      "settings": "{}"
+    },
+    {
+      "id": "status",
+      "title": "Status",
+      "type": "status",
+      "settings": "{\"done_colors\":[1],\"deactivated_labels\":[],\"color_mapping\":{\"2\":158,\"15\":2,\"158\":15},\"labels\":{\"0\":\"In Progress\",\"1\":\"Resolved\",\"2\":\"Closed\",\"7\":\"Open\"},\"labels_positions_v2\":{\"0\":0,\"1\":1,\"2\":3,\"5\":2},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#a1e3f6\",\"border\":\"#a1e3f6\",\"var_name\":\"sail\"},\"7\":{\"color\":\"#579bfc\",\"border\":\"#4387e8\",\"var_name\":\"bright-blue\"}}}"
+    },
+    {
+      "id": "date4",
+      "title": "Date",
+      "type": "date",
+      "settings": "{}"
+    },
+    {
+      "id": "email_mkxpawg3",
+      "title": "client_email",
+      "type": "email",
+      "settings": "{}"
+    },
+    {
+      "id": "color_mkxp805g",
+      "title": "priority",
+      "type": "status",
+      "settings": "{\"done_colors\":[1],\"labels\":{\"0\":\"High\",\"1\":\"Done\",\"2\":\"Urgent\",\"7\":\"Medium\"},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"},\"7\":{\"color\":\"#579bfc\",\"border\":\"#4387e8\",\"var_name\":\"bright-blue\"}}}"
+    },
+    {
+      "id": "long_text_mkxpgg6q",
+      "title": "Long text",
+      "type": "long_text",
+      "settings": "{}"
+    }
+  ],
+  "groups": [
+    {
+      "id": "topics",
+      "title": "Tickets",
+      "position": "65536"
+    },
+    {
+      "id": "group_mkxpbz9k",
+      "title": "Resolved",
+      "position": "131072.0"
+    }
+  ],
+  "items": [
+    {
+      "id": "18380098419",
+      "name": "dvwljbvew",
+      "group": {
+        "id": "topics",
+        "title": "Tickets"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxpawg3",
+          "type": "email",
+          "text": "mikehabib@redsis.com",
+          "value": "{\"text\":\"mikehabib@redsis.com\",\"email\":\"mikehabib@redsis.com\",\"changed_at\":\"2025-11-15T23:04:14.099Z\"}"
+        },
+        {
+          "id": "color_mkxp805g",
+          "type": "status",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "long_text_mkxpgg6q",
+          "type": "long_text",
+          "text": "",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18380098474",
+      "name": "rkhjbweir",
+      "group": {
+        "id": "topics",
+        "title": "Tickets"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "date4",
+          "type": "date",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "email_mkxpawg3",
+          "type": "email",
+          "text": "mikehabib@redsis.com",
+          "value": "{\"text\":\"mikehabib@redsis.com\",\"email\":\"mikehabib@redsis.com\",\"changed_at\":\"2025-11-15T23:04:31.866Z\"}"
+        },
+        {
+          "id": "color_mkxp805g",
+          "type": "status",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "long_text_mkxpgg6q",
+          "type": "long_text",
+          "text": "",
+          "value": null
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "222922899",
+      "name": "Client Portal Mike 5",
+      "type": "FeatureBoardView",
+      "settings_str": "{}"
+    }
+  ]
+}

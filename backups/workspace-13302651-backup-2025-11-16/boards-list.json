@@ -1,0 +1,70 @@
+{
+  "workspace_id": "13302651",
+  "backup_date": "2025-11-16T23:56:48.143Z",
+  "total_boards": 9,
+  "boards": [
+    {
+      "id": "18380268500",
+      "name": "Chase",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    },
+    {
+      "id": "18380098330",
+      "name": "Chedraui",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    },
+    {
+      "id": "18379880102",
+      "name": "VOI",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    },
+    {
+      "id": "18379873697",
+      "name": "Redsis",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    },
+    {
+      "id": "18379754041",
+      "name": "RSI",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    },
+    {
+      "id": "18379446736",
+      "name": "Service Providers",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    },
+    {
+      "id": "18379404757",
+      "name": "Project Creator",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    },
+    {
+      "id": "18379351659",
+      "name": "Users",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    },
+    {
+      "id": "18379040651",
+      "name": "Management Portal",
+      "description": null,
+      "board_kind": "public",
+      "state": "active"
+    }
+  ]
+}

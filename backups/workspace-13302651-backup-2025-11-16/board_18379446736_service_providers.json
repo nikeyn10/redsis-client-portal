@@ -1,0 +1,217 @@
+{
+  "id": "18379446736",
+  "name": "Service Providers",
+  "description": null,
+  "board_kind": "public",
+  "state": "active",
+  "metadata": {
+    "total_columns": 7,
+    "total_groups": 2,
+    "total_items": 3,
+    "total_views": 1
+  },
+  "columns": [
+    {
+      "id": "name",
+      "title": "Name",
+      "type": "name",
+      "settings": "{}"
+    },
+    {
+      "id": "status",
+      "title": "Status",
+      "type": "status",
+      "settings": "{\"done_colors\":[1],\"deactivated_labels\":[],\"color_mapping\":{\"2\":158,\"15\":2,\"158\":15},\"labels\":{\"0\":\"On Leave\",\"1\":\"Active\",\"2\":\"Inactive\"},\"labels_positions_v2\":{\"0\":0,\"1\":1,\"2\":3,\"5\":2},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#a1e3f6\",\"border\":\"#a1e3f6\",\"var_name\":\"sail\"}}}"
+    },
+    {
+      "id": "email_mkxpawg3",
+      "title": "Email",
+      "type": "email",
+      "settings": "{}"
+    },
+    {
+      "id": "phone_mkxpec5j",
+      "title": "Phone",
+      "type": "phone",
+      "settings": "{}"
+    },
+    {
+      "id": "text_mkxpb7j4",
+      "title": "Password",
+      "type": "text",
+      "settings": "{}"
+    },
+    {
+      "id": "dropdown_mkxpdbxw",
+      "title": "Specialization",
+      "type": "dropdown",
+      "settings": "{\"limit_select\":false,\"labels\":[{\"id\":1,\"name\":\"General Support\"},{\"id\":2,\"name\":\"Network Specialist\"},{\"id\":3,\"name\":\"Hardware Technician\"}],\"deactivated_labels\":[]}"
+    },
+    {
+      "id": "numeric_mkxp72jc",
+      "title": "Assigned Tickets",
+      "type": "numbers",
+      "settings": "{}"
+    }
+  ],
+  "groups": [
+    {
+      "id": "topics",
+      "title": "Tickets",
+      "position": "65536"
+    },
+    {
+      "id": "group_mkxpbz9k",
+      "title": "Resolved",
+      "position": "131072.0"
+    }
+  ],
+  "items": [
+    {
+      "id": "18379661718",
+      "name": "Service Provider 1",
+      "group": {
+        "id": "topics",
+        "title": "Tickets"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Active",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-15T00:12:04.509Z\"}"
+        },
+        {
+          "id": "email_mkxpawg3",
+          "type": "email",
+          "text": "mikehabib@redsis.com",
+          "value": "{\"text\":\"mikehabib@redsis.com\",\"email\":\"mikehabib@redsis.com\",\"changed_at\":\"2025-11-14T20:35:43.558Z\"}"
+        },
+        {
+          "id": "phone_mkxpec5j",
+          "type": "phone",
+          "text": "9544010493",
+          "value": "{\"phone\":\"9544010493\",\"changed_at\":\"2025-11-15T12:36:18.863Z\",\"countryShortName\":\"US\"}"
+        },
+        {
+          "id": "text_mkxpb7j4",
+          "type": "text",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxpdbxw",
+          "type": "dropdown",
+          "text": "Network Specialist",
+          "value": "{\"ids\":[2],\"changed_at\":\"2025-11-15T12:35:47.200Z\",\"override_all_ids\":\"true\"}"
+        },
+        {
+          "id": "numeric_mkxp72jc",
+          "type": "numbers",
+          "text": "",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18379772332",
+      "name": "SP 2",
+      "group": {
+        "id": "topics",
+        "title": "Tickets"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": "Active",
+          "value": "{\"index\":1,\"post_id\":null,\"changed_at\":\"2025-11-15T00:12:05.650Z\"}"
+        },
+        {
+          "id": "email_mkxpawg3",
+          "type": "email",
+          "text": "mikehabib@redsis.com",
+          "value": "{\"text\":\"mikehabib@redsis.com\",\"email\":\"mikehabib@redsis.com\",\"changed_at\":\"2025-11-14T21:59:03.993Z\"}"
+        },
+        {
+          "id": "phone_mkxpec5j",
+          "type": "phone",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "text_mkxpb7j4",
+          "type": "text",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxpdbxw",
+          "type": "dropdown",
+          "text": null,
+          "value": "{\"ids\":[]}"
+        },
+        {
+          "id": "numeric_mkxp72jc",
+          "type": "numbers",
+          "text": "",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "18379772602",
+      "name": "dgxcfhvgjbknl",
+      "group": {
+        "id": "group_mkxpbz9k",
+        "title": "Resolved"
+      },
+      "column_values": [
+        {
+          "id": "status",
+          "type": "status",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "email_mkxpawg3",
+          "type": "email",
+          "text": "mikehabib@redsis.com",
+          "value": "{\"text\":\"mikehabib@redsis.com\",\"email\":\"mikehabib@redsis.com\",\"changed_at\":\"2025-11-14T21:59:13.892Z\"}"
+        },
+        {
+          "id": "phone_mkxpec5j",
+          "type": "phone",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "text_mkxpb7j4",
+          "type": "text",
+          "text": "",
+          "value": null
+        },
+        {
+          "id": "dropdown_mkxpdbxw",
+          "type": "dropdown",
+          "text": null,
+          "value": null
+        },
+        {
+          "id": "numeric_mkxp72jc",
+          "type": "numbers",
+          "text": "",
+          "value": null
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "222807171",
+      "name": "Client Portal Mike 5",
+      "type": "FeatureBoardView",
+      "settings_str": "{}"
+    }
+  ]
+}

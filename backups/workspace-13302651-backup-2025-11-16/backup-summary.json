@@ -1,0 +1,86 @@
+{
+  "workspace_id": "13302651",
+  "workspace_name": "Redix Central Hub",
+  "backup_date": "2025-11-16T23:56:48.144Z",
+  "backup_directory": "/Users/mikehabib/Library/Mobile Documents/com~apple~CloudDocs/VisualStudio_Projects/Monday Vibe Project/backups/workspace-13302651-backup-2025-11-16",
+  "statistics": {
+    "total_boards": 9,
+    "total_items": 32,
+    "total_columns": 63,
+    "total_groups": 17
+  },
+  "boards": [
+    {
+      "id": "18380268500",
+      "name": "Chase",
+      "items": 0,
+      "columns": 6,
+      "groups": 2,
+      "backup_file": "board_18380268500_chase.json"
+    },
+    {
+      "id": "18380098330",
+      "name": "Chedraui",
+      "items": 2,
+      "columns": 6,
+      "groups": 2,
+      "backup_file": "board_18380098330_chedraui.json"
+    },
+    {
+      "id": "18379880102",
+      "name": "VOI",
+      "items": 0,
+      "columns": 6,
+      "groups": 2,
+      "backup_file": "board_18379880102_voi.json"
+    },
+    {
+      "id": "18379873697",
+      "name": "Redsis",
+      "items": 4,
+      "columns": 6,
+      "groups": 2,
+      "backup_file": "board_18379873697_redsis.json"
+    },
+    {
+      "id": "18379754041",
+      "name": "RSI",
+      "items": 2,
+      "columns": 7,
+      "groups": 2,
+      "backup_file": "board_18379754041_rsi.json"
+    },
+    {
+      "id": "18379446736",
+      "name": "Service Providers",
+      "items": 3,
+      "columns": 7,
+      "groups": 2,
+      "backup_file": "board_18379446736_service_providers.json"
+    },
+    {
+      "id": "18379404757",
+      "name": "Project Creator",
+      "items": 5,
+      "columns": 9,
+      "groups": 1,
+      "backup_file": "board_18379404757_project_creator.json"
+    },
+    {
+      "id": "18379351659",
+      "name": "Users",
+      "items": 8,
+      "columns": 8,
+      "groups": 1,
+      "backup_file": "board_18379351659_users.json"
+    },
+    {
+      "id": "18379040651",
+      "name": "Management Portal",
+      "items": 8,
+      "columns": 8,
+      "groups": 3,
+      "backup_file": "board_18379040651_management_portal.json"
+    }
+  ]
+}
