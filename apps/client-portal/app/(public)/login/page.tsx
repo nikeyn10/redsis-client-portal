@@ -8,8 +8,6 @@ import PINAuth from '@/components/auth/PINAuth';
 function LoginContent() {
   const [authMethod, setAuthMethod] = useState<'magic-link' | 'pin'>('magic-link');
 
-  const [authMethod, setAuthMethod] = useState<'magic-link' | 'pin'>('magic-link');
-
   return (
     <div className="min-h-screen flex items-center justify-center p-4 animate-fade-in" style={{ backgroundColor: 'var(--ibacs-dark)' }}>
       <div className="w-full max-w-md rounded-xl p-8 shadow-2xl" style={{
