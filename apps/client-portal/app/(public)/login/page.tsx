@@ -40,6 +40,7 @@ function LoginContent() {
         localStorage.setItem('client_email', data.user.email);
         localStorage.setItem('user_name', data.user.name);
         localStorage.setItem('user_id', data.user.id);
+        localStorage.setItem('client_board_id', data.user.ticketBoardId || '18379040651');
 
         setStatus('success');
         setTimeout(() => {

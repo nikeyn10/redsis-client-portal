@@ -95,6 +95,10 @@ export async function POST(request: NextRequest) {
       return acc;
     }, {});
 
+    // Use Management Portal board as default ticket board for now
+    // In production, this would be determined by user's sites/projects
+    const ticketBoardId = '18379040651'; // Management Portal board
+
     // Return authentication data
     return NextResponse.json({
       success: true,
@@ -102,6 +106,7 @@ export async function POST(request: NextRequest) {
         id: user.id,
         name: user.name,
         email: email,
+        ticketBoardId: ticketBoardId,
         token: `user-${user.id}-${Date.now()}`
       }
     });
